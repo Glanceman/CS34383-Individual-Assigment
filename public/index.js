@@ -59,7 +59,7 @@ function Update() {
 function draw() {
     Update();
     switch (mode) {
-        case 'view':
+        case 'view': //view image mode
             {
                 image(img, 0, 0)
                 filter(BLUR, 3);
@@ -69,7 +69,7 @@ function draw() {
                 }
             }
             break;
-        case "freehand":
+        case "freehand": //fresshand mode
             {
                 if(bshowImage===false){
                     pg=createGraphics(...canvasSize)
@@ -87,7 +87,7 @@ function draw() {
                 image(pg,0,0);
             }
             break;
-        case "circle":
+        case "circle": //draw circle mode
             {
                 if(bshowImage===false){
                     pg=createGraphics(...canvasSize)
@@ -103,7 +103,7 @@ function draw() {
             image(img, 0, 0)
             break;
     }
-    push()
+    push() // draw capture video
     {
         translate(640 * 2, 0)
         scale(-1, 1)
@@ -119,7 +119,8 @@ function draw() {
 
 
 }
-function keyPressed() {
+
+function keyPressed() { //keypress for switching mode
     console.log(indexFingerTip)
     console.log(predictions)
     switch (key) {
