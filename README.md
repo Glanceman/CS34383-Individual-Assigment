@@ -1,4 +1,4 @@
-# SM2278-MusicPlayer
+# CS3483-Indivial-Assignment
 Install dependency  
 >npm install
 
